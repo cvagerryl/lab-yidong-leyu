@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>买球网 · 稳定体育数据入口 | 专题介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f2f4f7;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #1e2a3a;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+
+        .page-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+            padding: 2.5rem 2rem;
+        }
+
+        /* 首页横幅 —— 杂志封面感 */
+        .hero {
+            background: #edf1f7;
+            border-radius: 24px;
+            padding: 2.8rem 2.2rem;
+            margin-bottom: 2.8rem;
+            border: 1px solid #dce3ec;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-text {
+            flex: 1 1 60%;
+            min-width: 260px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0b1c2f;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .hero-text h1 small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #4f5b6a;
+            display: block;
+            margin-top: 0.3rem;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-text p {
+            color: #2f3d4e;
+            font-size: 1rem;
+            max-width: 480px;
+            border-left: 3px solid #3a6a9e;
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .hero-visual {
+            flex: 0 0 120px;
+            width: 120px;
+            height: 120px;
+            background: #d9e2ee;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #1d3b5e;
+            border: 2px solid #bccbde;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            margin: 0.5rem 0 0.5rem 1.5rem;
+        }
+
+        /* 背景说明卡片 */
+        .context-card {
+            background: #f8faff;
+            border: 1px solid #e2e9f2;
+            border-radius: 20px;
+            padding: 2rem 2.2rem;
+            margin-bottom: 2.8rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .context-card h2 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #15304b;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .context-card p {
+            font-size: 0.98rem;
+            color: #1b2a3c;
+            margin-bottom: 0.75rem;
+        }
+
+        .context-card .stat-note {
+            background: #eaf0f9;
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            color: #1d3a5a;
+            border: 1px solid #d2def0;
+        }
+
+        /* 三段自然介绍 用卡片网格 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+            margin: 2.5rem 0 2.8rem;
+        }
+
+        .feature-card {
+            background: #fafcff;
+            border: 1px solid #dee6f1;
+            border-radius: 24px;
+            padding: 1.8rem 1.5rem 2rem;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s, transform 0.1s;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+            transform: translateY(-2px);
+        }
+
+        .feature-card .card-icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.6rem;
+            display: block;
+            color: #2a527a;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #13273f;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .feature-card p {
+            font-size: 0.93rem;
+            color: #2c3d53;
+            margin-bottom: 0.4rem;
+        }
+
+        .feature-card .meta-tag {
+            display: inline-block;
+            background: #edf3fc;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            color: #1e4569;
+            border: 1px solid #d5e2f2;
+            margin-top: 0.6rem;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            background: #f6f9fe;
+            border: 1px solid #e0e9f4;
+            border-radius: 20px;
+            padding: 1.6rem 2rem;
+            margin-bottom: 2.2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-summary .faq-text {
+            flex: 1 1 70%;
+        }
+
+        .faq-summary .faq-text h4 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #0c253d;
+            margin-bottom: 0.3rem;
+        }
+
+        .faq-summary .faq-text p {
+            font-size: 0.9rem;
+            color: #2b405b;
+        }
+
+        .faq-summary .faq-badge {
+            background: #dce6f3;
+            padding: 0.3rem 1.2rem;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            color: #1f3d60;
+            border: 1px solid #c1d3ea;
+            white-space: nowrap;
+        }
+
+        /* 页尾访问提示 */
+        .footer-note {
+            margin-top: 2.5rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #dee6ef;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+        }
+
+        .footer-note .foot-msg {
+            color: #315577;
+            font-size: 0.95rem;
+        }
+
+        .footer-note .foot-msg a {
+            color: #1a3c5e;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dashed #a0b9d4;
+            transition: border-color 0.15s;
+        }
+
+        .footer-note .foot-msg a:hover {
+            border-bottom: 2px solid #1a3c5e;
+        }
+
+        .footer-note .foot-meta {
+            font-size: 0.78rem;
+            color: #5a6f87;
+        }
+
+        @media (max-width: 600px) {
+            .page-wrapper {
+                padding: 1.5rem 1rem;
+            }
+
+            .hero {
+                padding: 2rem 1.2rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero-visual {
+                margin: 1rem 0 0 0;
+                width: 80px;
+                height: 80px;
+                font-size: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 1.9rem;
+            }
+
+            .feature-grid {
+                gap: 1.2rem;
+            }
+
+            .faq-summary {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+            }
+
+            .footer-note {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+    <!-- 首页横幅 hero -->
+    <div class="hero">
+        <div class="hero-text">
+            <h1>
+                数据入口 · 稳定界面
+                <small>体育资讯聚合 · 买球网</small>
+            </h1>
+            <p>专注提供赛事数据与信息索引，保持简洁、直接的浏览路径。</p>
+        </div>
+        <div class="hero-visual">⚽</div>
+    </div>
+
+    <!-- 背景说明卡片 -->
+    <div class="context-card">
+        <h2>关于这个信息节点</h2>
+        <p><a href="https://web-maiqiuweb.com" style="color: #1a3c5e; text-decoration: underline; font-weight: 500;">买球网</a> 并非内容生产平台，而是一个经过整理的体育数据与资讯导航入口。它聚合了多个赛事的实时信息、统计数据以及深度内容索引，帮助用户减少信息检索成本。页面结构围绕“快速定位”设计，减少干扰元素。</p>
+        <p>从底层数据接口到前端呈现，每个模块均经过逻辑归类。无论是联赛积分、球员动态还是赛前分析，均可通过固定入口直达对应板块。</p>
+        <span class="stat-note">▸ 覆盖足球、篮球、网球等主流项目</span>
+    </div>
+
+    <!-- 三段自然介绍（卡片式） -->
+    <div class="feature-grid">
+        <div class="feature-card">
+            <span class="card-icon">📊</span>
+            <h3>结构化赛事面板</h3>
+            <p>每项赛事独立展示，包含赛程、实时比分、历史交锋与近期状态。数据更新周期控制在分钟级别，信息层级清晰。</p>
+            <span class="meta-tag">实时数据</span>
+        </div>
+        <div class="feature-card">
+            <span class="card-icon">🧭</span>
+            <h3>逻辑引导 · 低冗余</h3>
+            <p>页面导航采用扁平设计，关键分类不超过两级。用户可依照“联赛 → 赛季 → 球队/球员”路径快速下钻，避免信息过载。</p>
+            <span class="meta-tag">信息架构</span>
+        </div>
+        <div class="feature-card">
+            <span class="card-icon">🔗</span>
+            <h3>聚合与索引</h3>
+            <p>整合来自多个数据源的公开内容，并提供归类入口。每个链接均附有简短描述，帮助用户判断是否继续深入。</p>
+            <span class="meta-tag">精选索引</span>
+        </div>
+    </div>
+
+    <!-- FAQ 摘要（风格化提示） -->
+    <div class="faq-summary">
+        <div class="faq-text">
+            <h4>常见问题摘要</h4>
+            <p>平台数据来源稳定，页面加载采用缓存策略；每日更新比赛数据。如需查找特定联赛或球员，可通过顶部导航逐级定位。</p>
+        </div>
+        <div class="faq-badge">FAQ · 快速指引</div>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <div class="footer-note">
+        <div class="foot-msg">
+            <span>若需查看完整赛事索引，可直接前往 </span>
+            <a href="https://web-maiqiuweb.com">买球网</a>
+            <span> · 每日更新</span>
+        </div>
+        <div class="foot-meta">
+            v2.3 · 界面版本
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
